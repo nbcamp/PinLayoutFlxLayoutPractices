@@ -3,7 +3,7 @@ import PinLayout
 import Then
 import UIKit
 
-final class ViewController: UIViewController {
+final class RootViewController: UIViewController {
     private lazy var label = UILabel().then {
         $0.text = "Hello, World!"
         $0.sizeToFit()

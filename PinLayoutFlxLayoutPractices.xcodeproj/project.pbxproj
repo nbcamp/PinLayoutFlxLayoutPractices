@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		3349E8C62AE38B0E000093DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3349E8C52AE38B0E000093DC /* AppDelegate.swift */; };
 		3349E8C82AE38B0E000093DC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3349E8C72AE38B0E000093DC /* SceneDelegate.swift */; };
-		3349E8CA2AE38B0E000093DC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3349E8C92AE38B0E000093DC /* ViewController.swift */; };
+		3349E8CA2AE38B0E000093DC /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3349E8C92AE38B0E000093DC /* RootViewController.swift */; };
 		3349E8CF2AE38B10000093DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3349E8CE2AE38B10000093DC /* Assets.xcassets */; };
 		3349E8D22AE38B10000093DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3349E8D02AE38B10000093DC /* LaunchScreen.storyboard */; };
 		3349E8DB2AE39B6C000093DC /* PinLayout in Frameworks */ = {isa = PBXBuildFile; productRef = 3349E8DA2AE39B6C000093DC /* PinLayout */; };
@@ -23,7 +23,7 @@
 		3349E8C22AE38B0E000093DC /* PinLayoutFlxLayoutPractices.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PinLayoutFlxLayoutPractices.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3349E8C52AE38B0E000093DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3349E8C72AE38B0E000093DC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3349E8C92AE38B0E000093DC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3349E8C92AE38B0E000093DC /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		3349E8CE2AE38B10000093DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3349E8D12AE38B10000093DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3349E8D32AE38B10000093DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -64,14 +64,38 @@
 		3349E8C42AE38B0E000093DC /* PinLayoutFlxLayoutPractices */ = {
 			isa = PBXGroup;
 			children = (
-				3349E8C52AE38B0E000093DC /* AppDelegate.swift */,
-				3349E8C72AE38B0E000093DC /* SceneDelegate.swift */,
-				3349E8C92AE38B0E000093DC /* ViewController.swift */,
-				3349E8CE2AE38B10000093DC /* Assets.xcassets */,
-				3349E8D02AE38B10000093DC /* LaunchScreen.storyboard */,
+				3349E8E72AE39FFA000093DC /* Resources */,
+				3349E8E82AE3A005000093DC /* Views */,
+				3349E8E62AE39FF1000093DC /* Controllers */,
 				3349E8D32AE38B10000093DC /* Info.plist */,
 			);
 			path = PinLayoutFlxLayoutPractices;
+			sourceTree = "<group>";
+		};
+		3349E8E62AE39FF1000093DC /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3349E8C92AE38B0E000093DC /* RootViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		3349E8E72AE39FFA000093DC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3349E8C52AE38B0E000093DC /* AppDelegate.swift */,
+				3349E8C72AE38B0E000093DC /* SceneDelegate.swift */,
+				3349E8CE2AE38B10000093DC /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		3349E8E82AE3A005000093DC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3349E8D02AE38B10000093DC /* LaunchScreen.storyboard */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,7 +180,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3349E8CA2AE38B0E000093DC /* ViewController.swift in Sources */,
+				3349E8CA2AE38B0E000093DC /* RootViewController.swift in Sources */,
 				3349E8C62AE38B0E000093DC /* AppDelegate.swift in Sources */,
 				3349E8C82AE38B0E000093DC /* SceneDelegate.swift in Sources */,
 			);
