@@ -1,26 +1,33 @@
 import UIKit
 
-final class HomeView: UIView, RootView {
-    private lazy var scrollView = FlexScrollView()
+final class HomeView: UIView, RootView, EventEmitter {
+    typealias EventType = HomeViewControllerEvent
+
+    var practices: [Practice] = []
+
+    private lazy var scrollView = FlexScrollView().then {
+        addSubview($0)
+    }
 
     func initUI() {
         backgroundColor = .systemBackground
-        addSubview(scrollView)
     }
 
     override func layoutSubviews() {
         super.layoutSubviews()
-        
-        scrollView.contentView.flex.padding(10).define { flex in
-            flex.addItems(count: 10, vGap: 10) { i in
+
+        scrollView.contentView.flex.padding(10).define { [unowned self] flex in
+            flex.addItems(count: practices.count, vGap: 10) { i in
                 let view = ExampleRowView()
 
-                view.title = "View \(i)"
-                if i % 2 == 0 {
-                    view.content = "Random Post Description......\nMultiple Line Test."
-                } else {
-                    view.content = "Random Post Description......"
-                }
+                let practice = practices[i]
+                view.title = practice.title
+                view.content = practice.content
+
+                let tapGesture = ContextTapGestureRecognizer(target: self, action: #selector(scrollViewCellTapped))
+                tapGesture.context["practice"] = practice
+                view.isUserInteractionEnabled = true
+                view.addGestureRecognizer(tapGesture)
 
                 return view
             }
@@ -28,5 +35,14 @@ final class HomeView: UIView, RootView {
 
         scrollView.pin.all()
         scrollView.endLayout()
+    }
+
+    @objc private func scrollViewCellTapped(recognizer: ContextTapGestureRecognizer) {
+        guard let practice = recognizer.context["practice"] as? Practice else { return }
+
+        emit(event: .moveToSomePractice(practice))
+        emit(event: .another {
+            print("Wow")
+        })
     }
 }

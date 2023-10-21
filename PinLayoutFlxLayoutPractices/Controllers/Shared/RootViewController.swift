@@ -5,6 +5,7 @@ class RootViewController<View: RootView>: UIViewController {
 
     override func loadView() {
         view = View()
+        rootView.viewController = self
         rootView.initUI()
     }
 }

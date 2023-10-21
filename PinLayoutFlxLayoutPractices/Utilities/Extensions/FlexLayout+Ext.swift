@@ -12,7 +12,7 @@ extension Flex {
         let _vGap = gap ?? vGap
         let _hGap = gap ?? hGap
 
-        for i in 1 ... count {
+        for i in 0 ..< count {
             addItem(builder(i))
             if i != count {
                 if let _vGap { addItem().height(_vGap) }

@@ -25,6 +25,10 @@
 		3349E8FD2AE3C363000093DC /* UIView+Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3349E8FC2AE3C363000093DC /* UIView+Preview.swift */; };
 		3349E8FF2AE3C715000093DC /* UIViewController+Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3349E8FE2AE3C715000093DC /* UIViewController+Preview.swift */; };
 		337511452AE3ECF400282D0B /* FlexScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337511442AE3ECF400282D0B /* FlexScrollView.swift */; };
+		337511482AE41E7800282D0B /* VerticalScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337511472AE41E7800282D0B /* VerticalScrollViewController.swift */; };
+		3375114B2AE41EBB00282D0B /* VerticalScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3375114A2AE41EBB00282D0B /* VerticalScrollView.swift */; };
+		337511532AE4264700282D0B /* ContextTapGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337511522AE4264700282D0B /* ContextTapGestureRecognizer.swift */; };
+		337511552AE433E400282D0B /* EventHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337511542AE433E400282D0B /* EventHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +47,10 @@
 		3349E8FC2AE3C363000093DC /* UIView+Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Preview.swift"; sourceTree = "<group>"; };
 		3349E8FE2AE3C715000093DC /* UIViewController+Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Preview.swift"; sourceTree = "<group>"; };
 		337511442AE3ECF400282D0B /* FlexScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlexScrollView.swift; sourceTree = "<group>"; };
+		337511472AE41E7800282D0B /* VerticalScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalScrollViewController.swift; sourceTree = "<group>"; };
+		3375114A2AE41EBB00282D0B /* VerticalScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalScrollView.swift; sourceTree = "<group>"; };
+		337511522AE4264700282D0B /* ContextTapGestureRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContextTapGestureRecognizer.swift; sourceTree = "<group>"; };
+		337511542AE433E400282D0B /* EventHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +103,7 @@
 				3349E8FE2AE3C715000093DC /* UIViewController+Preview.swift */,
 				3349E8ED2AE3A2DE000093DC /* Shared */,
 				3349E8C92AE38B0E000093DC /* HomeViewController.swift */,
+				337511472AE41E7800282D0B /* VerticalScrollViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -116,6 +125,7 @@
 				3349E8FC2AE3C363000093DC /* UIView+Preview.swift */,
 				3349E8F02AE3A2F6000093DC /* Shared */,
 				3349E8EC2AE3A2BD000093DC /* HomeView */,
+				337511492AE41E8700282D0B /* VerticalScrollView */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -150,6 +160,8 @@
 			isa = PBXGroup;
 			children = (
 				3349E8FB2AE3BF2F000093DC /* Extensions */,
+				337511522AE4264700282D0B /* ContextTapGestureRecognizer.swift */,
+				337511542AE433E400282D0B /* EventHandler.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -160,6 +172,14 @@
 				3349E8F92AE3BF22000093DC /* FlexLayout+Ext.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		337511492AE41E8700282D0B /* VerticalScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				3375114A2AE41EBB00282D0B /* VerticalScrollView.swift */,
+			);
+			path = VerticalScrollView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,6 +265,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3349E8CA2AE38B0E000093DC /* HomeViewController.swift in Sources */,
+				337511482AE41E7800282D0B /* VerticalScrollViewController.swift in Sources */,
 				3349E8C62AE38B0E000093DC /* AppDelegate.swift in Sources */,
 				3349E8FD2AE3C363000093DC /* UIView+Preview.swift in Sources */,
 				3349E8EF2AE3A2E5000093DC /* RootViewController.swift in Sources */,
@@ -254,7 +275,10 @@
 				3349E8F42AE3A3CC000093DC /* HomeView.swift in Sources */,
 				3349E8FF2AE3C715000093DC /* UIViewController+Preview.swift in Sources */,
 				3349E8C82AE38B0E000093DC /* SceneDelegate.swift in Sources */,
+				3375114B2AE41EBB00282D0B /* VerticalScrollView.swift in Sources */,
+				337511552AE433E400282D0B /* EventHandler.swift in Sources */,
 				3349E8F22AE3A30E000093DC /* RootView.swift in Sources */,
+				337511532AE4264700282D0B /* ContextTapGestureRecognizer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
