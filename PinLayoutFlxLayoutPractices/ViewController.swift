@@ -1,23 +1,23 @@
+import FlexLayout
+import PinLayout
+import Then
 import UIKit
 
 final class ViewController: UIViewController {
-    private lazy var label = {
-        let label = UILabel()
-        label.text = "Hello, World!"
-        label.sizeToFit()
-        return label
-    }()
-    
+    private lazy var label = UILabel().then {
+        $0.text = "Hello, World!"
+        $0.sizeToFit()
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         view.backgroundColor = .systemBackground
-        
+    }
+
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+
         view.addSubview(label)
-        label.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            label.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            label.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-        ])
+        label.pin.center()
     }
 }

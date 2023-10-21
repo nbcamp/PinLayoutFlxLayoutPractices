@@ -12,6 +12,11 @@
 		3349E8CA2AE38B0E000093DC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3349E8C92AE38B0E000093DC /* ViewController.swift */; };
 		3349E8CF2AE38B10000093DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3349E8CE2AE38B10000093DC /* Assets.xcassets */; };
 		3349E8D22AE38B10000093DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3349E8D02AE38B10000093DC /* LaunchScreen.storyboard */; };
+		3349E8DB2AE39B6C000093DC /* PinLayout in Frameworks */ = {isa = PBXBuildFile; productRef = 3349E8DA2AE39B6C000093DC /* PinLayout */; };
+		3349E8DE2AE39B77000093DC /* FlexLayout in Frameworks */ = {isa = PBXBuildFile; productRef = 3349E8DD2AE39B77000093DC /* FlexLayout */; };
+		3349E8E02AE39B77000093DC /* FlexLayoutYoga in Frameworks */ = {isa = PBXBuildFile; productRef = 3349E8DF2AE39B77000093DC /* FlexLayoutYoga */; };
+		3349E8E22AE39B77000093DC /* FlexLayoutYogaKit in Frameworks */ = {isa = PBXBuildFile; productRef = 3349E8E12AE39B77000093DC /* FlexLayoutYogaKit */; };
+		3349E8E52AE39B80000093DC /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 3349E8E42AE39B80000093DC /* Then */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +34,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3349E8E52AE39B80000093DC /* Then in Frameworks */,
+				3349E8DB2AE39B6C000093DC /* PinLayout in Frameworks */,
+				3349E8DE2AE39B77000093DC /* FlexLayout in Frameworks */,
+				3349E8E22AE39B77000093DC /* FlexLayoutYogaKit in Frameworks */,
+				3349E8E02AE39B77000093DC /* FlexLayoutYoga in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +90,13 @@
 			dependencies = (
 			);
 			name = PinLayoutFlxLayoutPractices;
+			packageProductDependencies = (
+				3349E8DA2AE39B6C000093DC /* PinLayout */,
+				3349E8DD2AE39B77000093DC /* FlexLayout */,
+				3349E8DF2AE39B77000093DC /* FlexLayoutYoga */,
+				3349E8E12AE39B77000093DC /* FlexLayoutYogaKit */,
+				3349E8E42AE39B80000093DC /* Then */,
+			);
 			productName = PinLayoutFlxLayoutPractices;
 			productReference = 3349E8C22AE38B0E000093DC /* PinLayoutFlxLayoutPractices.app */;
 			productType = "com.apple.product-type.application";
@@ -108,6 +125,11 @@
 				Base,
 			);
 			mainGroup = 3349E8B92AE38B0E000093DC;
+			packageReferences = (
+				3349E8D92AE39B6C000093DC /* XCRemoteSwiftPackageReference "PinLayout" */,
+				3349E8DC2AE39B77000093DC /* XCRemoteSwiftPackageReference "FlexLayout" */,
+				3349E8E32AE39B80000093DC /* XCRemoteSwiftPackageReference "Then" */,
+			);
 			productRefGroup = 3349E8C32AE38B0E000093DC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -281,6 +303,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = V94RHZNH5T;
+				"GCC_PREPROCESSOR_DEFINITIONS[arch=*]" = "FLEXLAYOUT_SWIFT_PACKAGE=1";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PinLayoutFlxLayoutPractices/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -293,6 +316,10 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				"OTHER_LDFLAGS[arch=*]" = (
+					"-Xlinker",
+					"-no_warn_duplicate_libraries",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = dev.jinyongp.PinLayoutFlxLayoutPractices;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -312,6 +339,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = V94RHZNH5T;
+				"GCC_PREPROCESSOR_DEFINITIONS[arch=*]" = "FLEXLAYOUT_SWIFT_PACKAGE=1";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PinLayoutFlxLayoutPractices/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -324,6 +352,10 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				"OTHER_LDFLAGS[arch=*]" = (
+					"-Xlinker",
+					"-no_warn_duplicate_libraries",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = dev.jinyongp.PinLayoutFlxLayoutPractices;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -357,6 +389,61 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3349E8D92AE39B6C000093DC /* XCRemoteSwiftPackageReference "PinLayout" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/layoutBox/PinLayout";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.10.4;
+			};
+		};
+		3349E8DC2AE39B77000093DC /* XCRemoteSwiftPackageReference "FlexLayout" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/layoutBox/FlexLayout.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.3;
+			};
+		};
+		3349E8E32AE39B80000093DC /* XCRemoteSwiftPackageReference "Then" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/Then";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3349E8DA2AE39B6C000093DC /* PinLayout */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3349E8D92AE39B6C000093DC /* XCRemoteSwiftPackageReference "PinLayout" */;
+			productName = PinLayout;
+		};
+		3349E8DD2AE39B77000093DC /* FlexLayout */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3349E8DC2AE39B77000093DC /* XCRemoteSwiftPackageReference "FlexLayout" */;
+			productName = FlexLayout;
+		};
+		3349E8DF2AE39B77000093DC /* FlexLayoutYoga */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3349E8DC2AE39B77000093DC /* XCRemoteSwiftPackageReference "FlexLayout" */;
+			productName = FlexLayoutYoga;
+		};
+		3349E8E12AE39B77000093DC /* FlexLayoutYogaKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3349E8DC2AE39B77000093DC /* XCRemoteSwiftPackageReference "FlexLayout" */;
+			productName = FlexLayoutYogaKit;
+		};
+		3349E8E42AE39B80000093DC /* Then */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3349E8E32AE39B80000093DC /* XCRemoteSwiftPackageReference "Then" */;
+			productName = Then;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3349E8BA2AE38B0E000093DC /* Project object */;
 }
