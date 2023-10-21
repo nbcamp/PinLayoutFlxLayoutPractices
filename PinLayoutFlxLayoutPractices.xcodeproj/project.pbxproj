@@ -20,6 +20,11 @@
 		3349E8EF2AE3A2E5000093DC /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3349E8EE2AE3A2E5000093DC /* RootViewController.swift */; };
 		3349E8F22AE3A30E000093DC /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3349E8F12AE3A30E000093DC /* RootView.swift */; };
 		3349E8F42AE3A3CC000093DC /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3349E8F32AE3A3CC000093DC /* HomeView.swift */; };
+		3349E8F72AE3B47B000093DC /* ExampleRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3349E8F62AE3B47B000093DC /* ExampleRowView.swift */; };
+		3349E8FA2AE3BF22000093DC /* FlexLayout+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3349E8F92AE3BF22000093DC /* FlexLayout+Ext.swift */; };
+		3349E8FD2AE3C363000093DC /* UIView+Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3349E8FC2AE3C363000093DC /* UIView+Preview.swift */; };
+		3349E8FF2AE3C715000093DC /* UIViewController+Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3349E8FE2AE3C715000093DC /* UIViewController+Preview.swift */; };
+		337511452AE3ECF400282D0B /* FlexScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337511442AE3ECF400282D0B /* FlexScrollView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +38,11 @@
 		3349E8EE2AE3A2E5000093DC /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		3349E8F12AE3A30E000093DC /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		3349E8F32AE3A3CC000093DC /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		3349E8F62AE3B47B000093DC /* ExampleRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleRowView.swift; sourceTree = "<group>"; };
+		3349E8F92AE3BF22000093DC /* FlexLayout+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FlexLayout+Ext.swift"; sourceTree = "<group>"; };
+		3349E8FC2AE3C363000093DC /* UIView+Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Preview.swift"; sourceTree = "<group>"; };
+		3349E8FE2AE3C715000093DC /* UIViewController+Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Preview.swift"; sourceTree = "<group>"; };
+		337511442AE3ECF400282D0B /* FlexScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlexScrollView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +83,7 @@
 				3349E8E72AE39FFA000093DC /* Resources */,
 				3349E8E82AE3A005000093DC /* Views */,
 				3349E8E62AE39FF1000093DC /* Controllers */,
+				3349E8F82AE3BF05000093DC /* Utilities */,
 				3349E8D32AE38B10000093DC /* Info.plist */,
 			);
 			path = PinLayoutFlxLayoutPractices;
@@ -81,6 +92,7 @@
 		3349E8E62AE39FF1000093DC /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				3349E8FE2AE3C715000093DC /* UIViewController+Preview.swift */,
 				3349E8ED2AE3A2DE000093DC /* Shared */,
 				3349E8C92AE38B0E000093DC /* HomeViewController.swift */,
 			);
@@ -101,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				3349E8D02AE38B10000093DC /* LaunchScreen.storyboard */,
+				3349E8FC2AE3C363000093DC /* UIView+Preview.swift */,
 				3349E8F02AE3A2F6000093DC /* Shared */,
 				3349E8EC2AE3A2BD000093DC /* HomeView */,
 			);
@@ -127,8 +140,26 @@
 			isa = PBXGroup;
 			children = (
 				3349E8F12AE3A30E000093DC /* RootView.swift */,
+				3349E8F62AE3B47B000093DC /* ExampleRowView.swift */,
+				337511442AE3ECF400282D0B /* FlexScrollView.swift */,
 			);
 			path = Shared;
+			sourceTree = "<group>";
+		};
+		3349E8F82AE3BF05000093DC /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				3349E8FB2AE3BF2F000093DC /* Extensions */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		3349E8FB2AE3BF2F000093DC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3349E8F92AE3BF22000093DC /* FlexLayout+Ext.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,8 +246,13 @@
 			files = (
 				3349E8CA2AE38B0E000093DC /* HomeViewController.swift in Sources */,
 				3349E8C62AE38B0E000093DC /* AppDelegate.swift in Sources */,
+				3349E8FD2AE3C363000093DC /* UIView+Preview.swift in Sources */,
 				3349E8EF2AE3A2E5000093DC /* RootViewController.swift in Sources */,
+				337511452AE3ECF400282D0B /* FlexScrollView.swift in Sources */,
+				3349E8FA2AE3BF22000093DC /* FlexLayout+Ext.swift in Sources */,
+				3349E8F72AE3B47B000093DC /* ExampleRowView.swift in Sources */,
 				3349E8F42AE3A3CC000093DC /* HomeView.swift in Sources */,
+				3349E8FF2AE3C715000093DC /* UIViewController+Preview.swift in Sources */,
 				3349E8C82AE38B0E000093DC /* SceneDelegate.swift in Sources */,
 				3349E8F22AE3A30E000093DC /* RootView.swift in Sources */,
 			);

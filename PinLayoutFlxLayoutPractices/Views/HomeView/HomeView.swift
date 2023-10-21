@@ -1,19 +1,32 @@
 import UIKit
 
-
 final class HomeView: UIView, RootView {
-    private lazy var label = UILabel().then {
-        $0.text = "Hello, World!"
-        $0.sizeToFit()
-    }
+    private lazy var scrollView = FlexScrollView()
 
     func initUI() {
-        addSubview(label)
+        backgroundColor = .systemBackground
+        addSubview(scrollView)
     }
 
     override func layoutSubviews() {
         super.layoutSubviews()
+        
+        scrollView.contentView.flex.padding(10).define { flex in
+            flex.addItems(count: 10, vGap: 10) { i in
+                let view = ExampleRowView()
 
-        label.pin.center()
+                view.title = "View \(i)"
+                if i % 2 == 0 {
+                    view.content = "Random Post Description......\nMultiple Line Test."
+                } else {
+                    view.content = "Random Post Description......"
+                }
+
+                return view
+            }
+        }
+
+        scrollView.pin.all()
+        scrollView.endLayout()
     }
 }
