@@ -3,12 +3,7 @@ import PinLayout
 import Then
 import UIKit
 
-final class RootViewController: UIViewController {
-    private lazy var label = UILabel().then {
-        $0.text = "Hello, World!"
-        $0.sizeToFit()
-    }
-
+final class HomeViewController: RootViewController<HomeView> {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
@@ -17,7 +12,6 @@ final class RootViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
 
-        view.addSubview(label)
-        label.pin.center()
+        print(#function)
     }
 }
