@@ -22,6 +22,11 @@ final class VerticalScrollView: UIView, RootView {
                 } else {
                     view.content = "Random Post Description......"
                 }
+                
+                let tapGesture = ContextTapGestureRecognizer(target: self, action: #selector(scrollViewCellTapped))
+                tapGesture.context["index"] = i
+                view.isUserInteractionEnabled = true
+                view.addGestureRecognizer(tapGesture)
 
                 return view
             }
@@ -29,5 +34,16 @@ final class VerticalScrollView: UIView, RootView {
 
         scrollView.pin.all()
         scrollView.endLayout()
+    }
+    
+    @objc private func scrollViewCellTapped(recognizer: ContextTapGestureRecognizer) {
+        guard let index = recognizer.context["index"] as? Int else { return }
+        emit(event: .tapped(index))
+    }
+}
+
+extension VerticalScrollView: EventEmitter {
+    enum Event: EventProtocol {
+        case tapped(Int)
     }
 }

@@ -15,28 +15,23 @@ final class HomeViewController: RootViewController<HomeView> {
             title: "Vertical ScrollView",
             content: "수직 스크롤에 대해 테스트합니다.",
             viewController: VerticalScrollViewController.self
-        )
+        ),
     ]
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "테스트 목록"
         rootView.practices = practices
     }
 }
 
-enum HomeViewControllerEvent: EventListener {
-    case moveToSomePractice(Practice)
-    case another(() -> Void)
-
-    func execute(on controller: HomeViewController) {
-        switch self {
-        case .moveToSomePractice(let practice):
+extension HomeViewController: EventListener {
+    func handle(event: HomeView.Event) {
+        switch event {
+        case .practiceCellTapped(let practice):
             let vc = practice.viewController.init()
             vc.title = practice.title
-            controller.navigationController?.pushViewController(vc, animated: true)
-        case .another(let handler):
-            print("another")
-            handler()
+            navigationController?.pushViewController(vc, animated: true)
         }
     }
 }

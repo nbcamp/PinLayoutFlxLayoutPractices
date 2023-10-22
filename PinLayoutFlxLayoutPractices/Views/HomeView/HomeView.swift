@@ -1,8 +1,6 @@
 import UIKit
 
-final class HomeView: UIView, RootView, EventEmitter {
-    typealias EventType = HomeViewControllerEvent
-
+final class HomeView: UIView, RootView {
     var practices: [Practice] = []
 
     private lazy var scrollView = FlexScrollView().then {
@@ -40,9 +38,12 @@ final class HomeView: UIView, RootView, EventEmitter {
     @objc private func scrollViewCellTapped(recognizer: ContextTapGestureRecognizer) {
         guard let practice = recognizer.context["practice"] as? Practice else { return }
 
-        emit(event: .moveToSomePractice(practice))
-        emit(event: .another {
-            print("Wow")
-        })
+        emit(event: .practiceCellTapped(practice))
+    }
+}
+
+extension HomeView: EventEmitter {
+    enum Event: EventProtocol {
+        case practiceCellTapped(Practice)
     }
 }

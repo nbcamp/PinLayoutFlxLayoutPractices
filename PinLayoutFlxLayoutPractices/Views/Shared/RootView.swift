@@ -4,14 +4,6 @@ protocol RootView: UIView {
     func initUI()
 }
 
-extension RootView where Self: EventEmitter {
-    func emit(event: EventType) {
-        if let vc = viewController as? Self.EventType.ControllerType {
-            event.execute(on: vc)
-        }
-    }
-}
-
 private enum AssociatedKeys {
     static var viewControllerKey = "ViewControllerKey"
 }
@@ -27,6 +19,14 @@ extension RootView {
             withUnsafePointer(to: &AssociatedKeys.viewControllerKey) { pointer in
                 objc_setAssociatedObject(self, pointer, newValue, .OBJC_ASSOCIATION_ASSIGN)
             }
+        }
+    }
+}
+
+extension RootView where Self: EventEmitter {
+    func emit(event: Event) {
+        if let viewController = viewController as? AnyEventListener {
+            viewController.handle(event)
         }
     }
 }
